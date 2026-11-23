@@ -1,58 +1,86 @@
+
 ---
-import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
 ---
 
 <header>
-	<nav>
-		<h2>
-			<a href="/">{SITE_TITLE}</a>
-		</h2>
-		<div class="internal-links">
-			<HeaderLink href="/">Ana Sayfa</HeaderLink>
-            <HeaderLink href="/blog">Blog</HeaderLink>
-            <HeaderLink href="/about">Hakkımda</HeaderLink>
-		</div>
-	</nav>
-</header>
-<style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: white;
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
+  <nav>
+    <a href="/" class="brand">helinbora<span>.</span></a>
 
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
-	}
-	.social-links,
-	.social-links a {
-		display: flex;
-	}
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
-	}
+    <div class="internal-links">
+      <HeaderLink href="/">Ana Sayfa</HeaderLink>
+      <HeaderLink href="/blog/">Yazılar</HeaderLink>
+      <HeaderLink href="/about/">Hakkımda</HeaderLink>
+    </div>
+  </nav>
+</header>
+
+<style>
+  header {
+    width: 100%;
+    background: var(--background);
+    border-bottom: 1px solid var(--border);
+  }
+
+  nav {
+    width: min(var(--content-width), calc(100% - 2 * var(--page-padding)));
+    min-height: 76px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+  }
+
+  .brand {
+    color: var(--black);
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.06em;
+    text-decoration: none;
+  }
+
+  .brand span {
+    color: var(--text-muted);
+  }
+
+  .internal-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .internal-links :global(a) {
+    padding: 8px 0;
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color var(--transition);
+  }
+
+  .internal-links :global(a:hover),
+  .internal-links :global(a.active) {
+    color: var(--black);
+  }
+
+  @media (max-width: 520px) {
+    nav {
+      min-height: 68px;
+      gap: 15px;
+    }
+
+    .brand {
+      font-size: 16px;
+    }
+
+    .internal-links {
+      gap: 14px;
+    }
+
+    .internal-links :global(a) {
+      font-size: 11px;
+    }
+  }
 </style>
