@@ -1,0 +1,133 @@
+
+---
+interface Props {
+  question: string;
+  options: string[];
+  pollId: string;
+}
+
+const { question, options, pollId } = Astro.props;
+---
+
+<div class="poll" data-poll-id={pollId}>
+  <h3 class="poll-question">{question}</h3>
+
+  <form class="poll-form">
+    {options.map((option, index) => (
+      <label class="poll-option">
+        <input
+          type="radio"
+          name={`poll-${pollId}`}
+          value={index}
+          required
+        />
+        <span>{option}</span>
+      </label>
+    ))}
+
+    <button type="submit">Oyumu Gönder</button>
+  </form>
+
+  <div class="poll-results" hidden>
+    <p class="poll-message">Tercihin kaydedildi.</p>
+    <button type="button" class="poll-reset">Oyumu değiştir</button>
+  </div>
+</div>
+
+<style>
+  .poll {
+    margin: 2.5rem 0;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .poll-question {
+    margin: 0 0 1.25rem;
+    font-size: 1.15rem;
+    color: var(--text);
+  }
+
+  .poll-form {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .poll-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.85rem;
+    border: 1px solid var(--border);
+    background: var(--background);
+    cursor: pointer;
+  }
+
+  .poll-option input {
+    margin-top: 0.3rem;
+    accent-color: var(--black);
+  }
+
+  .poll button {
+    justify-self: start;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid var(--black);
+    background: var(--black);
+    color: var(--white);
+    cursor: pointer;
+  }
+
+  .poll button:hover {
+    background: var(--white);
+    color: var(--black);
+  }
+
+  .poll-reset {
+    margin-top: 1rem;
+  }
+</style>
+
+
+<script>
+  document.querySelectorAll<HTMLElement>('.poll').forEach((poll) => {
+    const pollId = poll.dataset.pollId!;
+    const form = poll.querySelector('.poll-form') as HTMLFormElement;
+    const results = poll.querySelector('.poll-results') as HTMLDivElement;
+    const message = poll.querySelector('.poll-message') as HTMLParagraphElement;
+    const resetButton = poll.querySelector('.poll-reset') as HTMLButtonElement;
+
+    const storageKey = `poll-vote-${pollId}`;
+
+    function showVotedState() {
+      form.hidden = true;
+      results.hidden = false;
+      message.textContent = 'Bu ankette tercihini kaydettin.';
+    }
+
+    const savedVote = localStorage.getItem(storageKey);
+
+    if (savedVote !== null) {
+      showVotedState();
+    }
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const selectedOption = form.querySelector(
+        'input[type="radio"]:checked'
+      ) as HTMLInputElement | null;
+
+      if (!selectedOption) return;
+
+      localStorage.setItem(storageKey, selectedOption.value);
+      showVotedState();
+    });
+
+    resetButton.addEventListener('click', () => {
+      localStorage.removeItem(storageKey);
+      form.hidden = false;
+      results.hidden = true;
+      form.reset();
+    });
+  });
+</script>
