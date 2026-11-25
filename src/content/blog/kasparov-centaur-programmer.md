@@ -2,7 +2,7 @@
 ---
 title: "Kasparov’un Mirası: Satranç Tahtasından 'Sentor Yazılımcı' Çağına"
 description: "1997'de Deep Blue'nun Kasparov'u yenmesiyle başlayan insan ve makine tartışması, bugün yazılım dünyasında 'Sentor Yazılımcı' kavramıyla yeniden şekilleniyor."
-pubDate: '2026-12-01'
+pubDate: '2026-11-25'
 author: 'Helin Bora'
 tags:
   - Yapay Zeka

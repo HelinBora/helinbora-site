@@ -2,7 +2,7 @@
 ---
 title: 'Ada Lovelace Haklı mıydı? 1843’ten Günümüz Yapay Zeka Ajanlarına Bir Yolculuk'
 description: '180 yıl önce Ada Lovelace’in makinelerin sınırı üzerine söylediği ikonik söz, günümüz yapay zeka ajanları çağında hâlâ geçerli mi? Geçmişten geleceğe bir bakış.'
-pubDate: '2026-11-24'
+pubDate: '2026-11-25'
 author: 'Helin Bora'
 tags:
   - Yapay Zeka

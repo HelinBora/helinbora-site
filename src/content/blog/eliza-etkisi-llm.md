@@ -2,7 +2,7 @@
 ---
 title: '1966 ELIZA Etkisi: Yapay Zekaya "Ruh" Atfetme Yanılsaması ve Günümüz LLM''leri'
 description: '1966 yılında ELIZA ile başlayan insanlaştırma yanılsaması, günümüz büyük dil modelleri çağında nasıl daha güçlü hâle geldi? Yapay zekâ, insan algısı ve mühendislik sorumluluğu üzerine.'
-pubDate: '2026-12-08'
+pubDate: 2026-11-25
 author: 'Helin Bora'
 tags:
   - Yapay Zeka
