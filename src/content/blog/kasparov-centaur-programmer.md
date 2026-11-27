@@ -18,8 +18,6 @@ poll:
     - "C) Pilot ve Otonom Ajan: Hedefi verip arka planda ajanın tüm işi bitirmesini bekliyorum; ben sadece çıktıları onaylıyorum."
 ---
 
-# Kasparov’un Mirası: Satranç Tahtasından 'Sentor Yazılımcı' Çağına
-
 11 Mayıs 1997 günü New York'ta dünya satranç tarihinin en sarsıcı anlarından biri yaşandı. IBM’in süper bilgisayarı **Deep Blue**, dünya satranç şampiyonu **Garry Kasparov**’u 6 maçlık seride 3.5 - 2.5 mağlup etti. Ertesi gün gazete manşetleri tek bir sesle çalkalanıyordu: *“İnsan Zekasının Sonu”*, *“Satranç Artık Öldü mü?”*.
 
 Tüm dünya, insanlığın en kadim zeka oyununun bir silikon yığını karşısında pes ettiğini düşünüyordu. Ancak aradan geçen 30 yıla yakın süre bize çok farklı bir gerçek gösterdi: Satranç ölmedi; aksine makine desteğiyle tarihinin en popüler ve en yüksek seviyeli dönemine girdi.

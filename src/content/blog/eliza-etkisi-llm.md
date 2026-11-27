@@ -18,8 +18,6 @@ poll:
     - "C) Etkileşimsel Gerçeklik: Yapay zekanın bilinci olmasa bile, kurduğu dilsel etkileşim insan zihninde gerçek bir değer ve karşılık yaratır."
 ---
 
-# 1966 ELIZA Etkisi: Yapay Zekaya "Ruh" Atfetme Yanılsaması ve Günümüz LLM'leri
-
 1966 yılında Massachusetts Institute of Technology (MIT) laboratuvarlarında çalışan bilgisayar bilimcisi **Joseph Weizenbaum**, doğal dil ile insan-makine iletişimini incelemek amacıyla **ELIZA** adını verdiği bir bilgisayar programı geliştirdi. Programın içerisinde çalışan en ünlü betik olan **DOCTOR**, Hümanist (Rogerian) bir psikoterapisti taklit ediyordu.
 
 DOCTOR betiğinin çalışma prensibi şaşırtıcı derecede basitti: Kullanıcının yazdığı cümledeki anahtar kelimeleri tespit ediyor, dilbilgisel birkaç dönüşüm yapıyor ve aynı cümleyi bir soru olarak kullanıcıya geri yöneltiyordu.
